@@ -34,10 +34,12 @@ namespace _2023_02_17_Class3_
 
     class WarMachine : Ironman
     {
+        /*
         public override void CwHero() //sealed로 인해 컴파일에러
         {
             Console.WriteLine("I am WarMachine");
         }
+        */
     }
     #endregion
 
@@ -56,11 +58,38 @@ namespace _2023_02_17_Class3_
 
         private void ResetNumber()
         {
+            /*
             min = 1; //readonly라서 생성자에서만 수정가능
             max = 2; //readonly라서 생성자에서만 수정가능
+            */
         }
     }
     #endregion
+
+    class Calculator
+    {
+        private int startNum;
+        private int endNum;
+
+        public class Plus //중첩클래스
+        {
+            int plusNum;
+            Calculator calculator = new Calculator();
+
+            public Plus(int _startNum, int _plusNum)
+            {
+                calculator.startNum = _startNum;
+                plusNum = _plusNum;
+                calculator.endNum = 0;
+            }
+
+            public int PlusNum()
+            {
+                calculator.endNum = calculator.startNum + plusNum;
+                return calculator.endNum;
+            }
+        }
+    }
 
     internal class Program
     {
@@ -74,6 +103,11 @@ namespace _2023_02_17_Class3_
             captin.CwHero();
             #endregion
 
+            int startNum = int.Parse(Console.ReadLine());
+            int plusNum = int.Parse(Console.ReadLine());
+            Calculator.Plus plus = new Calculator.Plus(3,3);
+            Console.WriteLine(plus.PlusNum());
+            
         }
     }
 }
