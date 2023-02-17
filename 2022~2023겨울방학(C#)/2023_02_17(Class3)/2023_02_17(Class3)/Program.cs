@@ -60,6 +60,7 @@ namespace _2023_02_17_Class3_
             max = 2; //readonly라서 생성자에서만 수정가능
         }
     }
+    #endregion
 
     internal class Program
     {
