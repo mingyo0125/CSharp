@@ -16,7 +16,7 @@ namespace _2023_02_17_Class3_
 
     class Ironman : Hero
     {
-        public override void CwHero() //override
+        public sealed override void CwHero() //override, sealed
         {
             Console.WriteLine("I am Ironman");
         }
@@ -27,6 +27,15 @@ namespace _2023_02_17_Class3_
         public new void CwHero()
         {
             Console.WriteLine("I am Captin");
+        }
+
+    }
+
+    class WarMachine : Ironman
+    {
+        public override void CwHero() //sealed로 인해 컴파일에러
+        {
+            Console.WriteLine("I am WarMachine");
         }
     }
 
