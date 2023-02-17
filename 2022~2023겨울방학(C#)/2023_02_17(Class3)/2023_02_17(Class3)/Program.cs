@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2023_02_17_Class3_
 {
+    #region 상속
     class Hero
     {
         public virtual void CwHero()
@@ -38,17 +39,39 @@ namespace _2023_02_17_Class3_
             Console.WriteLine("I am WarMachine");
         }
     }
+    #endregion
 
+    #region readonly
+    class Number
+    {
+        readonly int min; //readonly
+        readonly int max; //readonly
+        const int _min = 1;
+
+        private Number(int min, int max)
+        {
+            this.min = min; //readonly라서 생성자에서만 수정가능
+            this.max = max; //readonly라서 생성자에서만 수정가능
+        }
+
+        private void ResetNumber()
+        {
+            min = 1; //readonly라서 생성자에서만 수정가능
+            max = 2; //readonly라서 생성자에서만 수정가능
+        }
+    }
 
     internal class Program
     {
         static void Main(string[] args)
         {
+            #region 상속
             Hero ironman = new Ironman(); //override ("I am Ironman"출력)
             ironman.CwHero();
 
             Hero captin = new Captin(); //new ("I am Hero"출력)
             captin.CwHero();
+            #endregion
 
         }
     }
