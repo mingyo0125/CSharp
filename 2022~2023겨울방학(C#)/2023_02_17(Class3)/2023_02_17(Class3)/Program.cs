@@ -80,12 +80,35 @@ namespace _2023_02_17_Class3_
             {
                 calculator.startNum = _startNum;
                 plusNum = _plusNum;
-                calculator.endNum = 0;
             }
 
             public int PlusNum()
             {
                 calculator.endNum = calculator.startNum + plusNum;
+                return calculator.endNum;
+            }
+        }
+
+        public partial class Minus //분할클래스
+        {
+            int minusNum;
+            Calculator calculator = new Calculator();
+
+            public Minus(int _startNum, int _minusNum)
+            {
+                calculator.startNum+= _startNum;
+                minusNum= _minusNum;
+            }
+            
+            public void MinusNum()
+            {
+                calculator.endNum = calculator.startNum - minusNum;
+            }
+        }
+        public partial class Minus //분할클래스
+        {
+            public int ReturnNum()
+            {
                 return calculator.endNum;
             }
         }
@@ -104,10 +127,14 @@ namespace _2023_02_17_Class3_
             #endregion
 
             int startNum = int.Parse(Console.ReadLine());
-            int plusNum = int.Parse(Console.ReadLine());
-            Calculator.Plus plus = new Calculator.Plus(3,3);
+            int secondNum = int.Parse(Console.ReadLine());
+
+            Calculator.Plus plus = new Calculator.Plus(startNum,secondNum); //중첩클래스
             Console.WriteLine(plus.PlusNum());
-            
+
+            Calculator.Minus minus = new Calculator.Minus(startNum,secondNum); //분할클래스
+            minus.MinusNum();
+            Console.WriteLine(minus.ReturnNum());
         }
     }
 }
