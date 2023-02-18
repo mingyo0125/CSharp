@@ -10,6 +10,11 @@ namespace _2023_02_18_Class4_
     readonly struct readonlyStruct
     {
         public readonly int Value;
+
+        public readonlyStruct(int value)
+        {
+            this.Value = value;
+        }
         /*
         public string Name; //readonly 구조체는 readonly필드만 가능
         */
@@ -71,6 +76,12 @@ namespace _2023_02_18_Class4_
 
             Console.WriteLine($" {firstNum} + {secondNum} = {calculator.Plus()}"); //인스턴스 생성을 하지 않은 구조체를 이용한 덧셈
             Console.WriteLine($" {firstNum} - {secondNum} = {calculator1.Minus()}"); //인스턴스 생성을 하여 구조체를 이용한 뺄셈
+
+            readonlyStruct readonlyStruct;
+            /*
+            readonlyStruct.Value = 1; //readonly라서 할당 불가능
+            */
+            readonlyStruct readonlyStruct1 = new readonlyStruct(1); //하지만 생성자는 할당가능
         }
     }
 }
