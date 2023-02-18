@@ -7,6 +7,15 @@ using _2023_02_18_Class4_; //확장클래스
 
 namespace _2023_02_18_Class4_
 {
+    readonly struct readonlyStruct
+    {
+        public readonly int Value;
+        /*
+        public string Name; //readonly 구조체는 readonly필드만 가능
+        */
+    }
+
+
     struct Calculator
     {
         public int firstNum;
