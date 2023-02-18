@@ -82,6 +82,10 @@ namespace _2023_02_18_Class4_
             readonlyStruct.Value = 1; //readonly라서 할당 불가능
             */
             readonlyStruct readonlyStruct1 = new readonlyStruct(1); //하지만 생성자는 할당가능
+
+            var tuple = (Name : "안형주", Age : 18, Height: 100); //튜플 선언
+            var(name, age, _) = tuple; //튜플 분해(Height필드는 무시)
+            Console.WriteLine($"{name}, {age}"); // 출력결과 : 안형주, 18
         }
     }
 }
