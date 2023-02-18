@@ -7,11 +7,17 @@ using _2023_02_18_Class4_; //확장클래스
 
 namespace _2023_02_18_Class4_
 {
+
     public static class Calculator
     {
         public static int Multifly(this int firstNum, int secondNum) //확장클래스
         {
             return firstNum * secondNum;
+        }
+
+        public static int division(this int firstNum, int secondNum) //확장클래스
+        {
+            return firstNum / secondNum;
         }
     }
 
@@ -20,7 +26,10 @@ namespace _2023_02_18_Class4_
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($" 3 * 4 = {3.Multifly(4)}"); //확장클래스
+            int firstNum = int.Parse(Console.ReadLine());
+            int secondNum = int.Parse(Console.ReadLine());
+            Console.WriteLine($" {firstNum} * {secondNum} = {firstNum.Multifly(secondNum)}"); //확장클래스
+            Console.WriteLine($" {firstNum} / {secondNum} = {firstNum.division(secondNum)}"); //확장클래스
         }
     }
 }
