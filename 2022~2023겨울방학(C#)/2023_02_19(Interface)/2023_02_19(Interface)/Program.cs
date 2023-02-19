@@ -6,13 +6,6 @@ using System.Threading.Tasks;
 
 namespace _2023_02_19_Interface_
 {
-    class Person : IAnimal //interface 상속
-    {
-        public void Eat()
-        {
-            Console.WriteLine("밥을 먹습니다");
-        }
-    }
 
     class Lion : IAnimal //interface 상속
     {
@@ -30,21 +23,37 @@ namespace _2023_02_19_Interface_
         }
     }
 
+    class Human : IHuman
+    {
+        public void Eat()
+        {
+            Console.WriteLine("사람이 밥을 먹습니다");
+        }
+        public void Walk()
+        {
+            Console.WriteLine("사람이 걷습니다");
+        }
+    }
+
+
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            Person person = new Person();
             Lion lion = new Lion();
             Elephant elephant = new Elephant();
 
-            person.Eat();
             lion.Eat();
             elephant.Eat();
 
-            MyEatFunc(person);
+
             MyEatFunc(lion);
-            MyEatFunc(elephant); //출력 X
+            /* MyEatFunc(elephant); */ //출력 X
+
+            Human human = new Human();
+            human.Eat();
+            human.Walk();
         }
 
         private static void MyEatFunc(object obj)

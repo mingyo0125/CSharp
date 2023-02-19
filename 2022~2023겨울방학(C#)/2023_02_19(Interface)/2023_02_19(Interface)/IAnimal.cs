@@ -10,4 +10,9 @@ namespace _2023_02_19_Interface_
     {
         void Eat();
     }
+
+    interface IHuman : IAnimal
+    {
+        void Walk();
+    }
 }
