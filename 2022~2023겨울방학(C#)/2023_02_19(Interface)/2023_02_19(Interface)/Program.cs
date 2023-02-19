@@ -35,6 +35,26 @@ namespace _2023_02_19_Interface_
         }
     }
 
+    class God : IGod
+    {
+        public void Eat()
+        {
+            Console.WriteLine("God can eat");
+        }
+        public void Walk()
+        {
+            Console.WriteLine("God can walk");
+        }
+        public void Fly()
+        {
+            Console.WriteLine("God can fly");
+        }
+        public void CanAnyThing()
+        {
+            Console.WriteLine("God can anything");
+        }
+    }
+
 
 
     internal class Program
@@ -54,6 +74,12 @@ namespace _2023_02_19_Interface_
             Human human = new Human();
             human.Eat();
             human.Walk();
+
+            God god = new God();
+            god.Eat();
+            god.Walk();
+            god.Fly();
+            god.CanAnyThing();
         }
 
         private static void MyEatFunc(object obj)

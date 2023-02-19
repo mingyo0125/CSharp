@@ -15,4 +15,14 @@ namespace _2023_02_19_Interface_
     {
         void Walk();
     }
+
+    interface IBird
+    {
+        void Fly();
+    }
+
+    interface IGod : IHuman, IBird
+    {
+        void CanAnyThing();
+    }
 }
