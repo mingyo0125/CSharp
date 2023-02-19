@@ -14,6 +14,10 @@ namespace _2023_02_19_Interface_
     interface IHuman : IAnimal
     {
         void Walk();
+        void Think()
+        {
+            Console.WriteLine("Human can Think");
+        }
     }
 
     interface IBird
