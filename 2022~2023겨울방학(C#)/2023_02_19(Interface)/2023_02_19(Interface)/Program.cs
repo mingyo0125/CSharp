@@ -49,7 +49,7 @@ namespace _2023_02_19_Interface_
 
         private static void MyEatFunc(object obj)
         {
-            IAnimal animal = obj as IAnimal;
+            IAnimal animal = obj as IAnimal; //매개변수로 받아온 ogj를 IAnial로 형변환, IAnimal을 상속받지 않았다면 Eat 메서드 수행 X
             if(obj != null)
             {
                 animal.Eat();
