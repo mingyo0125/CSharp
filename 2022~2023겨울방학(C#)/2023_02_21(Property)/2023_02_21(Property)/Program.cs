@@ -24,6 +24,10 @@ namespace _2023_02_21_Property_
             }
 
             public string Name { get; set; } = "아"; //자동 구현 프로퍼티
+
+            #region init
+            /* public string Name { get; init; } = "아"; */ //set 대신 init을 사용하면 값 수정 불가능
+            #endregion
         }
 
         #region 읽기전용 프로퍼티
