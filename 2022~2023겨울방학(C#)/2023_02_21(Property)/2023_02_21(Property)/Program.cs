@@ -23,7 +23,7 @@ namespace _2023_02_21_Property_
                 }
             }
 
-            public string Name { get; set; } //자동 구현 프로퍼티
+            public string Name { get; set; } = "아"; //자동 구현 프로퍼티
         }
 
         #region 읽기전용 프로퍼티
@@ -51,6 +51,13 @@ namespace _2023_02_21_Property_
             #endregion
 
             Console.WriteLine((friends.Name = "안형주")); //자동 구현 프로퍼티
+
+            Friends friends1 = new Friends()
+            {
+                Age = 10,
+                Name = "강민성"
+            };
+            Console.WriteLine($"{friends1.Name}, {friends1.Age}");
         }
     }
 }
