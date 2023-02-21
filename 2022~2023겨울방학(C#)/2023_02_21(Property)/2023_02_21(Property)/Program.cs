@@ -24,6 +24,7 @@ namespace _2023_02_21_Property_
             }
         }
 
+        #region 읽기전용 프로퍼티
         class ReadonlyFreiends
         {
             private int age = 10;
@@ -35,14 +36,17 @@ namespace _2023_02_21_Property_
                 }
             }
         }
+        #endregion
 
         static void Main(string[] args)
         {
             Friends friends = new Friends();
             Console.WriteLine(friends.Age = 5);
 
+            #region 읽기전용 프로퍼티
             ReadonlyFreiends readonlyFreiends = new ReadonlyFreiends();
             Console.WriteLine(readonlyFreiends.Age);
+            #endregion
         }
     }
 }
