@@ -22,6 +22,8 @@ namespace _2023_02_21_Property_
                     age = value;
                 }
             }
+
+            public string Name { get; set; } //자동 구현 프로퍼티
         }
 
         #region 읽기전용 프로퍼티
@@ -47,6 +49,8 @@ namespace _2023_02_21_Property_
             ReadonlyFreiends readonlyFreiends = new ReadonlyFreiends();
             Console.WriteLine(readonlyFreiends.Age);
             #endregion
+
+            Console.WriteLine((friends.Name = "안형주")); //자동 구현 프로퍼티
         }
     }
 }
