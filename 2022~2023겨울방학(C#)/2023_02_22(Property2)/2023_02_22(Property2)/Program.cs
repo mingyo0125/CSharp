@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2023_02_22_Property2_
 {
-    interface ITeacher
+    interface ITeacher //인터페이스의 프로퍼티
     {
         public int Age { get; set; }
         public string Name { get; set; }
