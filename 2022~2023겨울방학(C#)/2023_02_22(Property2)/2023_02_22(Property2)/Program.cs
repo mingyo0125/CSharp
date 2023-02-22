@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace _2023_02_22_Property2_
 {
-    
-
     abstract class Parents
     {
         public abstract int Age { get; set;}
