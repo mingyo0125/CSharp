@@ -26,6 +26,7 @@ namespace _2023_02_23_Array_
             {
                 Console.WriteLine(i);
             }
+            Console.WriteLine(test.scores.Length^1); //^연산자
         }
     }
 }
