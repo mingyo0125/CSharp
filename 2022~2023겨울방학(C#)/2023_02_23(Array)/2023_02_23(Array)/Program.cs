@@ -26,7 +26,13 @@ namespace _2023_02_23_Array_
             {
                 Console.WriteLine(i);
             }
-            Console.WriteLine(test.scores.Length^1); //^연산자
+            Console.WriteLine(test.scores.Length^1); //^연산자(인덱스의 역순으로 인덱스 지정)
+
+
+            #region 배열을 초기화 하는 방법
+            string[] array1 = new string[3] { "안", "형", "주" }; //1
+            string[] array2 = new string[] { "안", "형", "주" }; //2
+            string[] array3 = { "안", "형", "주" }; //3
         }
     }
 }
