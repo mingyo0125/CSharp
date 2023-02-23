@@ -33,6 +33,7 @@ namespace _2023_02_23_Array_
             string[] array1 = new string[3] { "안", "형", "주" }; //1
             string[] array2 = new string[] { "안", "형", "주" }; //2
             string[] array3 = { "안", "형", "주" }; //3
+            #endregion
         }
     }
 }
