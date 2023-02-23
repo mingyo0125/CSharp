@@ -8,7 +8,7 @@ namespace _2023_02_23_Array_
 {
     struct Test
     {
-        public int[] scores;
+        public int[] scores; //Array
 
         public Test(int index)
         {
@@ -22,7 +22,7 @@ namespace _2023_02_23_Array_
         static void Main(string[] args)
         {
             Test test = new Test(5);
-            foreach (var i in test.scores)
+            foreach (var i in test.scores) //Array
             {
                 Console.WriteLine(i);
             }
