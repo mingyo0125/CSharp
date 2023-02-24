@@ -16,7 +16,6 @@ namespace _2023_02_24_Array_
         }
     }
 
-
     internal class Program
     {
         static void Main(string[] args)
@@ -41,6 +40,8 @@ namespace _2023_02_24_Array_
             int[] sliced = test.scores[range]; //[와] 사이에 인덱스 대신 Systeam.Range 객체를 입력하면 분활된 배열이 반환
             int[] sliced2 = test.scores[1..3]; //더 간결한 버전
             Console.WriteLine(sliced2.Length);
+
+            int[,] square = new int[3,4]; //2차원배열
             #endregion
         }
     }
