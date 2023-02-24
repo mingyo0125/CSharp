@@ -42,6 +42,7 @@ namespace _2023_02_24_Array_
             Console.WriteLine(sliced2.Length);
 
             int[,] square = new int[3,4]; //2차원배열
+            int[,,] tetrahedron = new int[3,3,3]; //3차원 배열
             #endregion
         }
     }
