@@ -47,7 +47,7 @@ namespace _2023_02_24_Array_
             int[][] jaggedArray = new int[3][]; //가변배열
             jaggedArray[0] = new int[3] {1,2,3};
             jaggedArray[1] = new int[5] {1,2,3,4,5};
-            jaggedArray[2] = new int[] { 1,2,3,4,4,5,6};
+            jaggedArray[2] = new int[] { 1,2,3,4,4,5,6}; //지정하지 않았으므로 한계X
             Console.WriteLine(jaggedArray[0][0]); //가변배열 jaggedArray의 0번째 인덱스(new int {1,2,3})의 0번째 인덱스(1)출력
             #endregion
         }
