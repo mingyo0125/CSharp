@@ -17,7 +17,7 @@ namespace _2023_02_26_Array_
             Arlist.Add(1);
             Arlist.Add(2);
             Arlist.Add(3);
-            Arlist.Insert(3,2);
+            Arlist.Insert(3, 2);
             Arlist.RemoveAt(2);
             #endregion
 
@@ -27,7 +27,7 @@ namespace _2023_02_26_Array_
             queue.Enqueue(2);
             queue.Enqueue(3);
             queue.Dequeue();
-            for(int i = 0; i < queue.Count; i++)
+            for (int i = 0; i < queue.Count; i++)
             {
                 Console.WriteLine(queue.Count);
             }
@@ -47,7 +47,7 @@ namespace _2023_02_26_Array_
             hashtable[0] = "일";
             hashtable[1] = "이";
             hashtable[2] = "삼";
-            for(int i = 0; i < hashtable.Count; i++)
+            for (int i = 0; i < hashtable.Count; i++)
             {
                 Console.WriteLine(hashtable[i]);
             }
@@ -60,8 +60,15 @@ namespace _2023_02_26_Array_
             Stack stack1 = new Stack(arr);
             Hashtable hashtable1 = new Hashtable(arr);
 
-            ArrayList arrayList2 = new ArrayList() { 11,22,33 }; //ArrayList는 배열의 도움 없이 직접 컬렉션 초기자를 이용해 초기화 가능
+            ArrayList arrayList2 = new ArrayList() { 11, 22, 33 }; //ArrayList는 배열의 도움 없이 직접 컬렉션 초기자를 이용해 초기화 가능
 
+            Hashtable hashtable2 = new Hashtable()
+            {
+                "1" = "하나";
+                "2" = "둘";
+                "3" = "셋";
+            };
+            
         }
     }
 }
