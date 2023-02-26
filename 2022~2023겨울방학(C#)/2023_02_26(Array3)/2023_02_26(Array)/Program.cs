@@ -68,7 +68,7 @@ namespace _2023_02_26_Array_
                 "2" = "둘";
                 "3" = "셋";
             };
-            
+            #endregion
         }
     }
 }
