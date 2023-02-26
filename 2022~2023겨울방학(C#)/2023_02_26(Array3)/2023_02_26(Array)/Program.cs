@@ -13,7 +13,7 @@ namespace _2023_02_26_Array_
         static void Main(string[] args)
         {
             #region Arraylist
-            ArrayList Arlist = new ArrayList();
+            ArrayList arrayList = new ArrayList();
             Arlist.Add(1);
             Arlist.Add(2);
             Arlist.Add(3);
@@ -52,6 +52,16 @@ namespace _2023_02_26_Array_
                 Console.WriteLine(hashtable[i]);
             }
             #endregion
+
+            #region 컬렉션을 초기화하는 방법
+            int[] arr = { 0, 1, 2 };
+            ArrayList arrayList1 = new ArrayList(arr);
+            Queue queue1 = new Queue(arr);
+            Stack stack1 = new Stack(arr);
+            Hashtable hashtable1 = new Hashtable(arr);
+
+            ArrayList arrayList2 = new ArrayList() { 11,22,33 }; //ArrayList는 배열의 도움 없이 직접 컬렉션 초기자를 이용해 초기화 가능
+
         }
     }
 }
