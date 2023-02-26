@@ -41,6 +41,17 @@ namespace _2023_02_26_Array_
             stack.Pop();
             Console.WriteLine(stack.Count);
             #endregion
+
+            #region Hasatable
+            Hashtable hashtable = new Hashtable();
+            hashtable[0] = "일";
+            hashtable[1] = "이";
+            hashtable[2] = "삼";
+            for(int i = 0; i < hashtable.Count; i++)
+            {
+                Console.WriteLine(hashtable[i]);
+            }
+            #endregion
         }
     }
 }
