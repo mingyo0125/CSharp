@@ -33,7 +33,14 @@ namespace _2023_02_26_Array_
             }
             #endregion
 
-
+            #region Stack
+            Stack<int> stack = new Stack<int>();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Pop();
+            Console.WriteLine(stack.Count);
+            #endregion
         }
     }
 }
