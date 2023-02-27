@@ -44,6 +44,7 @@ namespace _2023_02_27_Array3_
 
         static void Main(string[] args)
         {
+            #region indexer
             int index = int.Parse(Console.ReadLine());
             MyList indexer = new MyList(index);
 
@@ -56,6 +57,7 @@ namespace _2023_02_27_Array3_
             {
                 Console.WriteLine(indexer[i]);
             }
+            #endregion
         }
     }
 }
