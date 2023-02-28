@@ -38,6 +38,10 @@ namespace _2023_02_28_Generic_
             public T GetElement(int index) { return arr[index]; }
         }
 
+        class LockGeneric<T> : Array_Int //Array_Int를 상속받는 형식이어야 할것
+        {
+            //..
+        }
 
         static void Main(string[] args)
         {
