@@ -26,12 +26,26 @@ namespace _2023_02_28_Generic_
             }
         }
 
+        class Array_Int
+        {
+            private int[] arr;
+            public int GetElement(int index) { return arr[index]; }
+        }
+
+        class Arr_Generic<T> //일반화 클래스
+        {
+            private T[] arr;
+            public T GetElement(int index) { return arr[index]; }
+        }
+
 
         static void Main(string[] args)
         {
             int[] source = { 1, 2, 3 };
             int[] target = { 4, 5, 6 };
             CopyArray<int>(source,target); //일반화 메서드 사용
+
+            Arr_Generic<int> arr_G = new Arr_Generic<int>(); //일반화 클래스 사용
         }
     }
 }
