@@ -49,6 +49,18 @@ namespace _2023_03_01_Generic2_
             }
             Console.WriteLine("Stack 끝");
             #endregion
+
+            #region Dictionnary
+            Dictionary<int, string> dictionary = new Dictionary<int, string>();
+            dictionary[1] = "일";
+            dictionary[2] = "이";
+            dictionary[3] = "삼";
+            for(int i = 1; i < dictionary.Count + 1; i++)
+            {
+                Console.WriteLine(dictionary[i]);
+            }
+            Console.WriteLine("Dictionary 끝");
+            #endregion
         }
     }
 }
