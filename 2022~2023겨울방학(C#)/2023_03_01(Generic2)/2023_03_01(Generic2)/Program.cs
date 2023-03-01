@@ -37,6 +37,18 @@ namespace _2023_03_01_Generic2_
             }
             Console.WriteLine("Queue 끝");
             #endregion
+
+            #region Stack
+            Stack stack = new Stack();
+            stack.Push("3");
+            stack.Push("2");
+            stack.Push("1");
+            while(stack.Count > 0)
+            {
+                Console.WriteLine(stack.Pop());
+            }
+            Console.WriteLine("Stack 끝");
+            #endregion
         }
     }
 }
