@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,21 @@ namespace _2023_03_01_Generic2_
                 Console.WriteLine(list[i]);
                 if(list.Count-1 == i)
                 {
-                    Console.WriteLine("끝");
+                    Console.WriteLine("List 끝");
                 }
             }
+            #endregion
+
+            #region Queue
+            Queue<string> queue = new Queue<string>();
+            queue.Enqueue("1");
+            queue.Enqueue("2");
+            queue.Enqueue("3");
+            while(queue.Count > 0)
+            {
+                Console.WriteLine(queue.Dequeue());
+            }
+            Console.WriteLine("Queue 끝");
             #endregion
         }
     }
