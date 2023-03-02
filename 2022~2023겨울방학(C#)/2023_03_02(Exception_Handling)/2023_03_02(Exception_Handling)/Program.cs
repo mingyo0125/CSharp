@@ -10,7 +10,7 @@ namespace _2023_03_02_Exception_Handling_
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("홀수를 입력하세요");
+            Console.WriteLine("수를 입력하세요");
             try
             {
                 int input = int.Parse(Console.ReadLine());
@@ -20,12 +20,16 @@ namespace _2023_03_02_Exception_Handling_
                 }
                 else
                 {
-                    Console.WriteLine("어 잘했어");
+                    Console.WriteLine("홀수입니다.");
                 }
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("프로그램을 종료합니다."); //return이나 throw문을 사용하여도 finally는 반드시 실행됨
             }
         }
     }
