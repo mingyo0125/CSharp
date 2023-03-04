@@ -10,7 +10,8 @@ namespace _2023_03_04_Delegate_
     internal class Program
     {
 
-        delegate int Calculator(int a, int b);
+        delegate int Calculator(int a, int b); //delegate
+        delegate int Generic<T>(T a, T b); //일반화 대리자
 
         static int Plus(int a, int b)
         {
@@ -22,6 +23,12 @@ namespace _2023_03_04_Delegate_
             return a - b;
         }
 
+        static int Multyply<T>(int a, int b)
+        {
+            return a * b;
+        }
+
+        
         static void Main(string[] args)
         {
             Calculator calculator;
@@ -30,6 +37,9 @@ namespace _2023_03_04_Delegate_
 
             calculator = new Calculator(Minus);
             Console.WriteLine(calculator(5, 3)); //Minus
+
+            Generic<int> generic = new Generic<int>(Multyply<int>);
+            Console.WriteLine(generic(5,3)); //Multifly(Generic)
         }
     }
 }
