@@ -41,13 +41,20 @@ namespace _2023_03_04_Delegate_
             */
             calculator = new Calculator(Plus);
             calculator += new Calculator(Minus);
-            calculator(5, 3); //대리자 체인
+            calculator(10, 5); //대리자 체인
             calculator -= new Calculator(Plus); //대리자 체인 제거
-            
+            calculator -= new Calculator(Minus); //대리자 체인 제거
+
 
             Generic<int> generic = new Generic<int>(Multyply<int>);
-            generic(5,3); //Multifly(Generic)
+            generic(10,5); //Multifly(Generic)
 
+            calculator = delegate (int a, int b) //익명메소드
+            {
+                Console.WriteLine($"{a} / {b} = {a / b}");
+            };
+
+            calculator(10,5);
         }
     }
 }
