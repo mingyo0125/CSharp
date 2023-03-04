@@ -42,6 +42,7 @@ namespace _2023_03_04_Delegate_
             calculator = new Calculator(Plus);
             calculator += new Calculator(Minus);
             calculator(5, 3); //대리자 체인
+            calculator -= new Calculator(Plus); //대리자 체인 제거
             
 
             Generic<int> generic = new Generic<int>(Multyply<int>);
