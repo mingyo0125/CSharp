@@ -22,7 +22,10 @@ namespace _2023_03_06_Lamda_
 
             DoSomething doSomething = (string msg) => //문 형식의 람다식
             {
-                Console.WriteLine(msg);
+                if(msg != null)
+                {
+                    Console.WriteLine(msg);
+                }
             };
 
             doSomething("문 형식의 람다식"); //문 형식의 람다식
