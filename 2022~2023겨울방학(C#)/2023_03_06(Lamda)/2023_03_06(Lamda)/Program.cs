@@ -11,7 +11,9 @@ namespace _2023_03_06_Lamda_
         delegate int Calculate(int a, int b);
         static void Main(string[] args)
         {
-            Calculate calculate = (int a, int b) => a + b;
+            //Calculate calculate = (int a, int b) => a + b; //람다
+
+            Calculate calculate = (a,b) => a + b; //형식유추람다
         }
     }
 }
